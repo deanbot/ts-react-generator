@@ -40,25 +40,25 @@ Creates files by specified name:
 
 Parameters:
 
-* $Name (required, first param, also ComponentName) - set name of component and scaffolded files.
-* $Path (second param, also DestinationPath) - Set path to scaffold files in
+* **Name** (required, first param, alias: ComponentName) - set name of component and scaffolded files.
+* **Path** (second param, alias: DestinationPath) - Set path to scaffold files in
   * if left blank files are created in current directory
 
 Examples:
 
 Create component files in current directory using component name "DateRefinerPanel":
 
-`cfc "DateRefinerPanel"`
+`cfc DateRefinerPanel`
 
 Create component files in specified directory:
 
-`cfc "DateRefinerPanel" ./src/components`
+`cfc DateRefinerPanel ./src/components`
 
 Commands can be used expliticely. Use default parameters or aliases... these commands are equivalent:
 
-`cfc -Name "My Name" -Path ./src/path`
+`cfc -Name DateRefiner -Path ./src/path`
 
-`cfc -ComponentName "My Name" -DestinationPath ./src/path`
+`cfc -ComponentName DateRefiner -DestinationPath ./src/path`
 
 ### Create Command Aliases
 
