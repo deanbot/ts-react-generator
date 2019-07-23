@@ -12,13 +12,13 @@ Assumptions:
 * uses modularized css
 * scss file names are in {Name}.module.scss format
 
-Using Windows & using git bash as terminal are not required but readme examples gear these assumptions.
+Using Windows & using git bash as terminal are not required but readme examples gear towards these assumptions.
 
 ## Execute script
 
 Execute powershell scripts from the directory you want to generate files in.
 
-To install project proceed to [Install](#install) otherwise jump to [Scripts](#scripts)
+To install project proceed to [Install](#install), otherwise jump to [Scripts](#scripts)
 
 # Install
 
@@ -29,7 +29,7 @@ Note: If using command shortcuts you'll want to create aliases to the files in t
 
 ### Scripts
 
-Run scripts by [refering directly](#execute-powershell-on-windows) to project powershell files on disk or [utilize aliases](#create-command-aliases).
+Run scripts by [referring directly](#execute-powershell-on-windows) to project powershell files on disk or [utilize aliases](#create-command-aliases) as shortcuts.
 
 #### create function component (alias: cfc)- `functionComponent.ps1`
 
@@ -62,7 +62,7 @@ Commands can be used expliticely. Use default parameters or aliases... these com
 
 ### Create Command Aliases
 
-You can use bash aliases to create shortcuts to execute of the powershell script in your installation directory (where you cloned the repo).
+You can use bash aliases to create shortcuts for execution of the powershell script in your installation directory (where you cloned the repo).
 
 Command aliases can be added to `.bash_profile` (from your user directory).
 
