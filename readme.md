@@ -18,7 +18,7 @@ Using Windows & using git bash as terminal are not required but readme examples 
 
 Execute powershell scripts from the directory you want to generate files in.
 
-To install project proceed to [Install](#install), otherwise jump to [Scripts](#scripts)
+To install project proceed to [Install](#install), otherwise jump to [Scripts](#scripts).
 
 # Install
 
@@ -31,7 +31,7 @@ Note: If using command shortcuts you'll want to create aliases to the files in t
 
 Run scripts by [referring directly](#execute-powershell-on-windows) to project powershell files on disk or [utilize aliases](#create-command-aliases) as shortcuts.
 
-#### create function component (alias: cfc)- `functionComponent.ps1`
+#### create function component (alias: cfc) - `functionComponent.ps1`
 
 Creates files by specified name:
 
@@ -66,14 +66,14 @@ You can use bash aliases to create shortcuts for execution of the powershell scr
 
 Command aliases can be added to `.bash_profile` (from your user directory).
 
-See examples below (replace `path/to/ts-react-generator` with the actual path to this project)
+See examples below (replace `path/to/ts-react-generator` with the actual path to this project):
 
 ```sh
 alias cfc="PowerShell $HOME/path/to/ts-react-generator/functionalComponent.ps1"
 ```
 
-Be sure to `source ~/.bash_profile` after making the change
+Be sure to `source ~/.bash_profile` after making the change.
 
 ### Execute PowerShell on Windows
 
-To execute PowerShell files on Windows: from terminal of choice use `PowerShell`, i.e. '$> PowerShell myFile.ps1`
+To execute PowerShell files on Windows: from terminal of choice use `PowerShell`, i.e. '$> PowerShell myFile.ps1`.
