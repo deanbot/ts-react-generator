@@ -13,6 +13,7 @@ $name = $ComponentName -replace "\s+", "-"
 $invalid = [System.IO.Path]::GetInvalidFileNameChars()
 $regex = "[$([Regex]::Escape($invalid))]"
 $name = $name -replace $regex, ""
+$nameLower = $name.Substring(0, 1).ToLower() + $name.Substring(1)
 
 # get path and file name
 $path = $pwd
@@ -35,7 +36,7 @@ Write-Output "Creating react file at $filePath";
 $content = @"
 import * as classNames from 'classnames';
 import * as React from 'react';
-import styles from './${name}.modules.scss';
+import styles from './${name}.module.scss';
 
 export interface I${name}Props {
 
@@ -45,7 +46,7 @@ export const ${name}: React.FunctionComponent<I${name}Props> = ({
 
 }) => {
   return (
-    <div className={classNames(styles.${name})}>
+    <div className={classNames(styles.${nameLower})}>
 
     </div>
   );
@@ -56,15 +57,14 @@ export default ${name};
 # Create file with content
 Set-Content -Path $filePath -Value $content
 
-$fileNameStyles = "$name.modules.scss"
+$fileNameStyles = "$name.module.scss"
 $filePathStyles = Join-Path $path $fileNameStyles
 if (!(Test-Path $filePathStyles -PathType "Leaf")) {
   Write-Output "Createing sass file at $filePathStyles"
 
   # lowercase first character
-  $selectorNameStyles = $name.Substring(0, 1).ToLower() + $name.Substring(1)
   $contentStyles = @"
-.${selectorNameStyles} {
+.${nameLower} {
   display: block;
 }
 "@
